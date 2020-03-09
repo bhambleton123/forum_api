@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def get_user
+    render :json => current_user
+  end
+
   def create
     @user = User.new();
     @user.email = params[:email]
