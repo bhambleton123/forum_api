@@ -1,0 +1,2 @@
+class VideoGameThread < ApplicationRecord
+end

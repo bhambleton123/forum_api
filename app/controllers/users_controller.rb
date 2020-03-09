@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new();
     @user.email = params[:email]
     @user.password = params[:password]
+    @user.user_type = "standard"
     @user.save
 
     if @user.id.nil?
