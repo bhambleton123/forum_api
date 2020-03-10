@@ -1,7 +1,11 @@
 class VideoGameThreadsController < ApplicationController
-  def get
+  def index
     video_game_id = VideoGame.where(:title => params[:title]).take.id
     render :json => VideoGameThread.where(:video_game_id => video_game_id).find_all
+  end
+
+  def get
+    render :json => VideoGameThread.find(params[:id])
   end
 
   def create

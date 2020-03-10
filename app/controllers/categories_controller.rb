@@ -1,6 +1,10 @@
 class CategoriesController < ApplicationController
-  def get
+  def index
     render :json => Category.all
+  end
+
+  def get
+    render :json => Category.find(params[:id])
   end
 
   def create
